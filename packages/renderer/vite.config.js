@@ -1,11 +1,11 @@
 /* eslint-env node */
 
-import {chrome} from '../../electron-vendors.config.json';
-import {join} from 'path';
-import {builtinModules} from 'module';
-import vue from '@vitejs/plugin-vue';
+import { builtinModules } from 'module'
+import { join } from 'path'
 
-const PACKAGE_ROOT = __dirname;
+import { chrome } from '../../electron-vendors.config.json'
+
+const PACKAGE_ROOT = __dirname
 
 /**
  * @type {import('vite').UserConfig}
@@ -16,15 +16,15 @@ const config = {
   root: PACKAGE_ROOT,
   resolve: {
     alias: {
-      '/@/': join(PACKAGE_ROOT, 'src') + '/',
-    },
+      '/@/': join(PACKAGE_ROOT, 'src') + '/'
+    }
   },
-  plugins: [vue()],
+  plugins: [],
   base: '',
   server: {
     fs: {
-      strict: true,
-    },
+      strict: true
+    }
   },
   build: {
     sourcemap: true,
@@ -34,18 +34,16 @@ const config = {
     terserOptions: {
       ecma: 2020,
       compress: {
-        passes: 2,
+        passes: 2
       },
-      safari10: false,
+      safari10: false
     },
     rollupOptions: {
-      external: [
-        ...builtinModules,
-      ],
+      external: [...builtinModules]
     },
     emptyOutDir: true,
-    brotliSize: false,
-  },
-};
+    brotliSize: false
+  }
+}
 
-export default config;
+export default config
