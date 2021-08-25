@@ -39,7 +39,7 @@ const config = {
       safari10: false
     },
     rollupOptions: {
-      external: [...builtinModules]
+      external: [...builtinModules.filter(m => m !== 'process' && m !== 'assert')]
     },
     emptyOutDir: true,
     brotliSize: false

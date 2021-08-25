@@ -1,7 +1,9 @@
 .app {
   background-color: transparent;
+  display: flex;
+  flex-direction: row;
 }
 
 button {
-  font-size: calc(10px + 2vim);
+  font-size: calc(10px + 2vmin);
 }
