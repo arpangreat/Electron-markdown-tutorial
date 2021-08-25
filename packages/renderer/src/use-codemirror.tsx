@@ -9,8 +9,7 @@ import { lineNumbers, highlightActiveLineGutter } from '@codemirror/gutter'
 import { defaultHighlightStyle, HighlightStyle, tags } from '@codemirror/highlight'
 import { markdown, markdownLanguage } from '@codemirror/lang-markdown'
 import { languages } from '@codemirror/language-data'
-import { onedark } from '@codemirror/theme-one-dark'
-import { javascript } from '@codemirror/lang-javascript'
+import { oneDark } from '@codemirror/theme-one-dark'
 import type React from 'react'
 
 export const transparentTheme = EditorView.theme({
@@ -69,6 +68,7 @@ const useCodeMirror = <T extends Element>(
           codeLanguages: languages,
           addKeymap: true
         }),
+        oneDark,
         transparentTheme,
         syntaxHighlighting,
         EditorView.lineWrapping,
