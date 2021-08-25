@@ -11,10 +11,8 @@ const App: React.FC = () => {
   }, [])
   return (
     <div className="app">
-      <header className="app-header">
-        <Editor onChange={handleDocChange} initialDoc={doc} />
-        <Preview doc={doc} />
-      </header>
+      <Editor onChange={handleDocChange} initialDoc={doc} />
+      <Preview doc={doc} />
     </div>
   )
 }
